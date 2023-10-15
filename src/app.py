@@ -3,13 +3,16 @@ from dotenv import load_dotenv
 import os
 import streamlit as st
 import requests
+from PIL import Image
+
 
 load_dotenv()
 
 # Use the API_URL from the .env file if available, otherwise default to localhost.
 API_URL = os.environ.get('API_URL') or 'http://localhost:3000/dev/questions'
 
-# Center-aligning the image and setting its width to 200 pixels
+image = Image.open('src/images/osjr3wvz.jpg')
+st.image(image, width=100)
 
 user_input = st.text_input("Enter your question:")
 if user_input:
