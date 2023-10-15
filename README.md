@@ -35,7 +35,8 @@ This project aims to serve as a possible AWS solution to an app that helps you e
     pip install -r requirements.txt
     ```
 4. Copy [`.env.example`](.env.example) to [`.env`](.env) and fill in the required fields.
-4.1 Optional: Modify the [`config.yaml`](config.yaml) file accordingly
+
+    4.1 Optional: Modify the [`config.yaml`](config.yaml) file accordingly
 
 ### Running the Application
 1. For local Lambda testing, start the local Lambda server by running:
@@ -44,7 +45,7 @@ This project aims to serve as a possible AWS solution to an app that helps you e
     ```
 2. Run the '/store_data' endpoint to create a vector store for a model as instructed in the [API Endpoints](#API-Endpoints) section.
 
-    **Note**: You must run this at least once for creating the vector store and only rerun it if you want to update the vector store.
+    **Note**: You must run this at least once for creating the vector store for a given model and only rerun it if you want to update the vector store.
 
 3. In a separate terminal, run the Streamlit app:
     ```bash
