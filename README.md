@@ -38,7 +38,7 @@ This AWS-based app efficiently navigates through large volumes of documentation.
     ```
 4. Copy [`.env.example`](.env.example) to [`.env`](.env) and fill in the required fields.
 
-    4.1 Optional: Modify the [`config.yaml`](config.yaml) file accordingly
+5. Add your documents to the appropriate directory in [`config.yaml`](config.yaml)
 
 ### Running the Application
 1. For local Lambda testing, start the local Lambda server by running:
