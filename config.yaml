@@ -1,0 +1,4 @@
+document_directory: 'documentation_directory'
+# embedding_model: thenlper/gte-base
+# embedding_model: BAAI/bge-small-en-v1.5
+embedding_model: thenlper/gte-small

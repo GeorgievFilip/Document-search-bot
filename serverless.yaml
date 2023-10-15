@@ -1,0 +1,25 @@
+service: document-bot
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  getAnswerFromQuestion:
+    handler: src.question.handler
+    timeout: 300
+    events:
+      - http:
+          path: questions
+          method: POST
+  saveVectorStore:
+    handler: src.store_data.handler
+    timeout: 900
+    events:
+      - http:
+          path: store_data
+          method: GET
+plugins:
+  - serverless-offline
