@@ -39,15 +39,15 @@ This project aims to serve as a possible AWS solution to an app that helps you e
     serverless offline start
     ```
     **Important**: This must be running for the Streamlit app to function.
-5. Run the '/store_data' endpoint to create a vector store for the model specified in [`config.yaml`](config.yaml), as instructed in the [API Endpoints](#API-Endpoints) section.
+5. Run the '/store_data' endpoint to create a vector store as instructed in the [API Endpoints](#API-Endpoints) section.
 
-    Note: You need to run this once for creating the vector store and only rerun it if you want to update the vector store.
+    **Note**: You need to run this once for creating the vector store and only rerun it if you want to update the vector store.
 
 6. In a separate terminal, run the Streamlit app:
     ```bash
     streamlit run src/app.py
     ```
-    **Important**: The local Lambda server must be running for the Streamlit app to function.
+    **Note**: The local Lambda server must be running for the Streamlit app to function.
 
 ### Design Choices
 
