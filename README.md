@@ -39,7 +39,7 @@ This project aims to serve as a possible AWS solution to an app that helps you e
     serverless offline start
     ```
     **Important**: This must be running for the Streamlit app to function.
-5. Run the '/store_data' endpoint to create a vector store for the model specified in [`config.yaml`](config.yaml) as seen in [GET `/store_data` section](#get-store-data).
+5. Run the '/store_data' endpoint to create a vector store for the model specified in [`config.yaml`](config.yaml), as instructed in the [API Endpoints](#API-Endpoints) section.
 
     Note: You need to run this once for creating the vector store and only rerun it if you want to update the vector store.
 
@@ -47,6 +47,7 @@ This project aims to serve as a possible AWS solution to an app that helps you e
     ```bash
     streamlit run src/app.py
     ```
+    **Important**: The local Lambda server must be running for the Streamlit app to function.
 
 ### Design Choices
 
@@ -82,6 +83,7 @@ The project follows a modular architecture:
 - [`serverless.yaml`](serverless.yaml): Serverless Framework configuration file for defining and deploying the Lambda functions.
 - [`config.yaml`](config.yaml): Configuration file that outlines key parameters like the documentation directory and the embedding model to be used. This file serves as a centralized location for modifying important settings.
 
+<a name="API-Endpoints"></a>
 ## API Endpoints
 
 After running serverless offline start, the local Lambda server will be available for testing. Postman or similar tools can be used to send requests to the API endpoints, mimicking the behavior of AWS API Gateway. The local server will be accessible at http://localhost:3000/dev.
