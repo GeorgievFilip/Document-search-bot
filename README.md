@@ -23,27 +23,28 @@ This project aims to serve as a possible AWS solution to an app that helps you e
 
 ### Local Setup
 
+1. Install the above prerequisites.
 
-1. Copy [`.env.example`](.env.example) to [`.env`](.env) and fill in the required fields.
-1.1 Optional: Modify the [`config.yaml`](config.yaml) file accordingly
-2. Install JavaScript dependencies:
+2. Copy [`.env.example`](.env.example) to [`.env`](.env) and fill in the required fields.
+2.1 Optional: Modify the [`config.yaml`](config.yaml) file accordingly
+3. Install JavaScript dependencies:
    ```bash
     npm install
     ```
-3. Install Python dependencies:
+4. Install Python dependencies:
     ```bash
     pip install -r requirements.txt
     ```
-4. For local Lambda testing, start the local Lambda server by running:
+5. For local Lambda testing, start the local Lambda server by running:
     ```bash
     serverless offline start
     ```
     **Important**: This must be running for the Streamlit app to function.
-5. Run the '/store_data' endpoint to create a vector store as instructed in the [API Endpoints](#API-Endpoints) section.
+6. Run the '/store_data' endpoint to create a vector store as instructed in the [API Endpoints](#API-Endpoints) section.
 
     **Note**: You need to run this once for creating the vector store and only rerun it if you want to update the vector store.
 
-6. In a separate terminal, run the Streamlit app:
+7. In a separate terminal, run the Streamlit app:
     ```bash
     streamlit run src/app.py
     ```
