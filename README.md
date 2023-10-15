@@ -14,37 +14,39 @@ This project aims to serve as a possible AWS solution to an app that helps you e
 - **Libraries**: `langchain`, `sentence-transformer`, `openai`, `boto3`
 
 ## Getting Started
-
+<a name="Prerequisites"></a>
 ### Prerequisites
 
 - Python 3.x
 - Node.js and Serverless Framework
 - PostgreSQL and PGVector
 
-### Local Setup
+## Local Setup
+### Environment Setup
 
-1. Install the above prerequisites.
+1. Install the [prerequisites](#Prerequisites).
 
-2. Copy [`.env.example`](.env.example) to [`.env`](.env) and fill in the required fields.
-2.1 Optional: Modify the [`config.yaml`](config.yaml) file accordingly
-3. Install JavaScript dependencies:
+2. Install JavaScript dependencies:
    ```bash
     npm install
     ```
-4. Install Python dependencies:
+3. Install Python dependencies:
     ```bash
     pip install -r requirements.txt
     ```
-5. For local Lambda testing, start the local Lambda server by running:
+4. Copy [`.env.example`](.env.example) to [`.env`](.env) and fill in the required fields.
+4.1 Optional: Modify the [`config.yaml`](config.yaml) file accordingly
+
+### Running the Application
+1. For local Lambda testing, start the local Lambda server by running:
     ```bash
     serverless offline start
     ```
-    **Important**: This must be running for the Streamlit app to function.
-6. Run the '/store_data' endpoint to create a vector store as instructed in the [API Endpoints](#API-Endpoints) section.
+2. Run the '/store_data' endpoint to create a vector store for a model as instructed in the [API Endpoints](#API-Endpoints) section.
 
-    **Note**: You need to run this once for creating the vector store and only rerun it if you want to update the vector store.
+    **Note**: You must run this at least once for creating the vector store and only rerun it if you want to update the vector store.
 
-7. In a separate terminal, run the Streamlit app:
+3. In a separate terminal, run the Streamlit app:
     ```bash
     streamlit run src/app.py
     ```
