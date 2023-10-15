@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-This project aims to serve as a possible AWS solution to an app that helps you efficiently navigate through a large amount of documentation. It provides answers to user queries based on the documentation and directs to relevant further reading.
+This AWS-based app efficiently navigates through large volumes of documentation. It provides answers to user queries based on the documentation and directs to relevant further reading.
 
 ![App Screenshot](src/images/Screenshot.png)
 
